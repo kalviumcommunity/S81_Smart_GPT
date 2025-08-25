@@ -6,6 +6,7 @@ import zeroShotRouter from "./src/routes/zeroshot.js";
 import oneShotRouter from "./src/routes/oneshot.js";
 import multiShotRouter from "./src/routes/multishot.js";
 import functionCallingRouter from "./src/routes/functioncalling.js";
+import chainOfThoughtRouter from "./src/routes/chainofthought.js";
 const app = express();
 
 app.use(cors());
@@ -16,6 +17,7 @@ app.use("/api/zeroshot", zeroShotRouter);
 app.use("/api/oneshot", oneShotRouter); 
 app.use("/api/multishot", multiShotRouter);
 app.use("/api/function-calling", functionCallingRouter);
+app.use("/api/chain-of-thought", chainOfThoughtRouter);
 
 app.listen(env.PORT, () => {
   console.log(`✅ Server running on http://localhost:${env.PORT}`);
