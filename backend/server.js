@@ -11,6 +11,7 @@ import dynamicPromptingRouter from "./src/routes/dynamicPrompting.js";
 import tokenRouter from "./src/routes/token.js";
 import temperatureRouter from "./src/routes/temperature.js";
 import topPRouter from "./src/routes/topP.js";
+import topKRouter from "./src/routes/topK.js";
 const app = express();
 
 app.use(cors());
@@ -27,6 +28,7 @@ app.use("/api/dynamic-prompt", dynamicPromptingRouter);
 app.use("/api/tokens", tokenRouter);
 app.use("/api/temperature", temperatureRouter);
 app.use("/api/top-p", topPRouter);
+app.use("/api/top-k", topKRouter);
 
 app.listen(env.PORT, () => {
   console.log(`✅ Server running on http://localhost:${env.PORT}`);
