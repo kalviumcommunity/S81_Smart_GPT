@@ -22,7 +22,7 @@ app.use("/api/multishot", multiShotRouter);
 app.use("/api/function-calling", functionCallingRouter);
 app.use("/api/chain-of-thought", chainOfThoughtRouter);
 app.use("/api/dynamic-prompt", dynamicPromptingRouter);
-
+app.use("/api/tokens", tokenRouter);
 
 app.listen(env.PORT, () => {
   console.log(`✅ Server running on http://localhost:${env.PORT}`);
