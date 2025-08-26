@@ -9,6 +9,7 @@ import functionCallingRouter from "./src/routes/functioncalling.js";
 import chainOfThoughtRouter from "./src/routes/chainofthought.js";
 import dynamicPromptingRouter from "./src/routes/dynamicPrompting.js";
 import tokenRouter from "./src/routes/token.js";
+import temperatureRouter from "./src/routes/temperature.js";
 const app = express();
 
 app.use(cors());
@@ -23,6 +24,7 @@ app.use("/api/function-calling", functionCallingRouter);
 app.use("/api/chain-of-thought", chainOfThoughtRouter);
 app.use("/api/dynamic-prompt", dynamicPromptingRouter);
 app.use("/api/tokens", tokenRouter);
+app.use("/api/temperature", temperatureRouter);
 
 app.listen(env.PORT, () => {
   console.log(`✅ Server running on http://localhost:${env.PORT}`);
